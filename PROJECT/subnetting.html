@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subnetting calculator</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <img src="img/background.png" class="background-img">
+  <img src="img/dark-background.webp" class="darkbackground-img" style="width: 80%;">
+
+  <div class="container-fluid justify-content-center flex-column align-items-center cont-subn">
+
+    <div class="row navbar">
+      <div class="col-sm">
+        <a href="home.html"><button class="btnmenu">Torna al menù</button></a>
+      </div>
+    </div>
+
+    <div class="tit-subnetting">Subnetter v1.0</div>
+
+    <div class="d-sm-flex justify-content-center flex-column align-items-center">
+      <div class="input-container">
+
+        <div class="d-sm-flex justify-content-center">
+          <input id="ip" type="text" name="ip" placeholder="indirizzo di rete">
+          <div class="align-self-sm-end" id="bar"> / </div>
+          <input id="sm" type="text" name="subnet" placeholder="subnetmask">
+        </div>
+
+        <div class="d-sm-inline-flex justify-content-center flex-column align-items-center">
+          <input id="host" type="range" name="reti" min="0" max="128" value="0" step="1">
+          <output id="range-txt" for="host">Numero di reti: </output>
+          <button id="trasforma" class="btnmenu">Subcraft!</button>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="out-table">
+      <div class="row" style="margin: 0px 0px;">
+        <div class="col-sm-3 tit-col">
+          SUBNETMASK
+        </div>
+
+        <div class="col-sm tit-col">
+          RANGE NET-IP
+        </div>
+
+        <div class="col-sm tit-col">
+          RANGE HOST-IP
+        </div>
+
+        <div class="col-sm-2 tit-col">
+          HOSTS
+        </div>
+      </div>
+
+      <div class="row" style="margin: 0px 0px;">
+        <div class="col-sm-3 subnets"></div>
+
+        <div class="col-sm net-range"></div>
+
+        <div class="col-sm host-range"></div>
+
+        <div class="col-sm-2 num-host"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="home-footer">
+    Subnetcraft v1.0.0
+  </footer>
+
+
+
+
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
